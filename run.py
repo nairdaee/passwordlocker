@@ -83,6 +83,69 @@ def intro():
             print('\n')
             print(f"⇨ Congratulations {f_name} {s_name}, you now have an account \n")
             print('\n')
+        elif short_code == 'lg':
+
+            print("Enter the first name of your registered account")
+            account_name = input()
+            print('\n')
+
+            authentification = getpass.getpass('Password:')
+            if check_existing_user(authentification):
+                search_account = find_account(authentification)
+
+
+
+                while True:
+                    print(f"⇨ Welcome {search_account.first_name} {search_account.second_name} \n")
+                    print("⇨ cc-To create new credential, vc-To view all your credentials, ex-exit account \n ")
+                    print('-'*80)
+                    short_code=input().lower()
+                    if short_code == 'cc':
+                        print("New credential")
+                        print('-'*14)
+                        print("Enter account name")
+                        account_name = input()
+                        print("Make a password \n")
+                        print("To make your own password press- a, to generate a password press - g \n")
+                        print('-'*50)
+                        generate=input()
+                        print('\n')
+
+                        if generate == 'g':
+                            letters = string.ascii_letters + string.digits
+                            gpassword = ''.join(random.choice(letters) for i in range(9))
+                            print(f"Your new generated password is: {gpassword} \n")
+                            passkey=gpassword
+
+                        elif generate == 'a':
+                            print("Enter its password")
+                            passkey = input()
+                            print('\n')
+                        print(f"👍_{account_name} has been saved")
+
+                        save_credential(create_credential(account_name,passkey))
+
+                    elif short_code == 'vc':
+                        if display_credentials:
+                            print("⇨ Here is a list of all your accounts and passwords \n")
+                            for credential in display_credentials():
+                                print(f"Account name: {credential.account_name} - password: {credential.passkey}")
+                    elif short_code == 'dc':
+                        print("Which credential would you like to delete?")
+                        del_account = input()
+                        if del_account == account_name:
+
+                            Credential.credential_list.remove(credential)
+                            print("👍_Credential deleted")
+                        else:
+                            print("No match of such a credential")
+
+                    elif short_code == 'ex':
+                        print("You have exited your account \n")
+                        break
+            else:
+                print("The password was incorrect \n")
+                print('\n')
 
 if __name__ == '__main__':
 
