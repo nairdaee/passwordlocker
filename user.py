@@ -1,3 +1,5 @@
+from credentials import Credential
+
 class User: 
     '''
     class that generates new instances of users accounts
@@ -22,3 +24,21 @@ class User:
         method to display all the users
         '''
         return cls.user_list
+    @classmethod
+    def user_exist(cls,password):
+        '''
+        method to check if a user and
+        their details exist
+        '''
+        for user in cls.user_list:
+            if  user.password == password:
+                return True
+        return False
+    @classmethod
+    def find_account(cls,password2):
+        '''
+        method that finds an account by its name
+        '''
+        for user in cls.user_list:
+            if user.password == password2:
+                return user
