@@ -15,3 +15,10 @@ class User:
         self.first_name = first_name
         self.second_name = second_name
         self.password = password
+    
+    @classmethod
+    def display_users(cls):
+        '''
+        method to display all the users
+        '''
+        return cls.user_list
