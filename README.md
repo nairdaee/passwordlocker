@@ -22,6 +22,10 @@ Follow the following easy steps:
 3.  Run the application using your version of python i.e `python3.8 run.py`
 4. Enjoy
 
+Note: App contains a third party module so in order to avoid a module error:
+
+Make sure you have installed the pyperclip module i.e   `python3.8 -m pip install pyperclip`
+
 ### Known Bugs
 No known bugs
 
