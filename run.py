@@ -146,12 +146,18 @@ def intro():
             else:
                 print("The password was incorrect \n")
                 print('\n')
-         elif short_code == 'du':
+        elif short_code == 'du':
             print("Here is a list of all the users\n")
             for user in display_users():
                 print(f"{user.first_name} {user.second_name} \n")
 
+        elif short_code == 'ex':
 
+            print("Ok well. See yah! \n")
+
+            break
+        else:
+            print("☹ _ I cant understand that, please use these codes \n")
 
 if __name__ == '__main__':
 
