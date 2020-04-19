@@ -11,7 +11,17 @@ def create_credential(account_name,passkey):
     '''
     new_credential = Credential(account_name,passkey)
     return new_credential
-    
+def save_credential(credential):
+    '''
+    function to save a credential
+    '''
+    credential.save_credential()
+def display_credentials():
+    '''
+    function that dispalys all credentials
+    '''
+    return Credential.display_credentials()
+
 def create_user(f_name,s_name,password):
     '''
     function to create a new user
