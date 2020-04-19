@@ -41,5 +41,16 @@ class TestUser(unittest.TestCase):
         method that displays all thes signed up users
         '''
         self.assertEqual(User.display_users(),User.user_list)
+    def test_user_exist(self):
+        '''
+        test to check if a user exists in user list
+        '''
+        self.new_user.save_user()
+        test_user = User("test","sname","passw")
+        test_user.save_user()
+        user_exists =User.user_exist("test")
+    
+
+        self.assertTrue(user_exists)
 if __name__ == '__main__':
     unittest.main()

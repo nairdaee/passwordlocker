@@ -58,6 +58,31 @@ def intro():
     print("Hey there! Welcome to Password Locker")
     print('\n')
     print("Please sign up for an account to enjoy services")
+    
+    while True:
+        print("⇨ Use these short codes : su - Sign up, lg - login, du-display all users, ex-Exit app ")
+        print('-'*64)
+        print('\n')
+        short_code = input().lower()
+        print('\n')
+        if short_code == 'su':
+            print("New User")
+            print("-"*9)
+
+            print("Enter you first name...")
+            f_name = input()
+
+            print("Enter your second name...")
+            s_name=input()
+
+            print("Enter your password...")
+            password=input()
+            print('\n')
+
+            save_users(create_user(f_name,s_name,password))
+            print('\n')
+            print(f"⇨ Congratulations {f_name} {s_name}, you now have an account \n")
+            print('\n')
 
 if __name__ == '__main__':
 
