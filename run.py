@@ -19,7 +19,7 @@ def display_users():
 def intro():
     print("Hey there! Welcome to Password Locker")
     print('\n')
-    print("Please sign up for an accout to enjoy services")
+    print("Please sign up for an account to enjoy services")
 
 if __name__ == '__main__':
 
