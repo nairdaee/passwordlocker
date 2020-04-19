@@ -146,6 +146,12 @@ def intro():
             else:
                 print("The password was incorrect \n")
                 print('\n')
+         elif short_code == 'du':
+            print("Here is a list of all the users\n")
+            for user in display_users():
+                print(f"{user.first_name} {user.second_name} \n")
+
+
 
 if __name__ == '__main__':
 
