@@ -12,7 +12,7 @@ This is a password locker app that allows users to sign up,login and save their 
 
 ### Technologies used
 
-`Python *version 3.8* `
+`Python version 3.8 `
 
 
 ### Setup
