@@ -12,7 +12,7 @@ This is a password locker app that allows users to sign up,login and save their 
 
 ### Technologies used
 
-Python *version 3.8*
+`Python version 3.8 `
 
 
 ### Setup
@@ -40,6 +40,6 @@ No known bugs
      4. Delete credentials
 
 ### License
-Copyright (c) {2020} Adrian Etenyi, Moringa School
+Copyright (c) 2020 Adrian Etenyi, Moringa School
 Licensed under the [MIT license](LICENSE)
 
