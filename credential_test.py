@@ -11,13 +11,13 @@ class TestUser(unittest.TestCase):
         '''
         Setup method to run before each test cases
         '''
-        self.new_credential = Credential("twitter","muko12")
+        self.new_credential = Credential("random","any")
     def test_init(self):
         '''
         test_init checks if the object is initialised properly
         '''
-        self.assertEqual(self.new_credential.account_name,"twitter")
-        self.assertEqual(self.new_credential.passkey,"muko12")
+        self.assertEqual(self.new_credential.account_name,"random")
+        self.assertEqual(self.new_credential.passkey,"any")
     def test_save_credential(self):
         '''
         test_save_credential tests if a new credential has been added to credentials
@@ -36,7 +36,7 @@ class TestUser(unittest.TestCase):
         credential from credentials list
         '''
         self.new_credential.save_credential()
-        test_credential = Credential("test","0893uhjnv")
+        test_credential = Credential("testing","okay")
         test_credential.save_credential()
 
         self.new_credential.delete_credential()

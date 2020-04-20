@@ -32,7 +32,7 @@ class TestUser(unittest.TestCase):
         test_save_multiple_user tests if many users can be saved
         '''
         self.new_user.save_user()
-        test_user = User("test","user","muk")
+        test_user = User("test","user","any")
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
